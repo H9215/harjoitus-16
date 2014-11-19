@@ -1,0 +1,51 @@
+/*jesse väänänen h9215
+23.10.2014
+
+
+
+Harjoitus 16 (Palautus vko 46)
+Tee ohjelma, joka kysyy henkilotietosi ja tallentaa ne tietueeseen.
+Tietueeseen talletetaan seuraavat tiedot:
+etunimi (merkkijono; C:n merkkitaulukko)
+sukunimi (merkkijono; C:n merkkitaulukko)
+koulumatka (reaaliluku)
+osoite (merkkijono; C:n merkkitaulukko)
+postinumero (merkkijono; C:n merkkitaulukko)
+kengannumero (kokonaisluku)
+
+Ohjelma tulostaa lopuksi tietueen tiedot naytölle.*/
+
+#include <iostream> 
+using namespace std;
+struct HENKILÖ  //tietuekuvaus
+{
+	char etunimi[50];
+	char sukunimi[50];
+	float koulumatka;
+	char osoite[50];
+	char postinumero[50];
+	int kenkä;
+
+};
+void main()
+{
+	HENKILÖ hlö;
+	cout << "syötä etunimesi, sukunimesi, koulumatkasi, osoitteesi, postinumerosi ja kengännumerosi.\n";
+	cin.get(hlö.etunimi, 50);
+	cin.get();
+	cin.get(hlö.sukunimi, 50);
+	cin >> hlö.koulumatka;
+	cin.get();
+	cin.get(hlö.osoite, 50);
+	cin.get();
+	cin.get(hlö.postinumero, 50);
+	cin >> hlö.kenkä;
+
+	cout << "\n\n\n\n"<<hlö.etunimi<<"\n";
+	cout << hlö.sukunimi<<"\n";
+	cout << hlö.koulumatka<<"\n";
+	cout << hlö.osoite<<"\n";
+	cout << hlö.postinumero<<"\n";
+	cout << hlö.kenkä<<"\n";
+
+}
